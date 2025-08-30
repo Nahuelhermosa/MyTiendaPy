@@ -1,0 +1,5 @@
+setup.py
+tp2Nahuel.egg-info/PKG-INFO
+tp2Nahuel.egg-info/SOURCES.txt
+tp2Nahuel.egg-info/dependency_links.txt
+tp2Nahuel.egg-info/top_level.txt

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: tp2Nahuel
+Version: 0.1
+Summary: un paquete de ejemplo en pyton
+Author: Nahuel Hermosa
+Requires-Python: >=3.6
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary

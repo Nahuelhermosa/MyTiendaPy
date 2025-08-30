@@ -19,23 +19,18 @@ def login():
 
 def registrar_usuario():
     usuarios = gestor.cargar_json("usuarios.json")
-
     nuevo_usuario = input("Ingrese un nombre de usuario: ").strip()
-    # validamos que no exista
+
     if any(u["usuario"] == nuevo_usuario for u in usuarios):
-        print("❌ El usuario ya existe, intente con otro nombre")
+        print("El usuario ya existe, intente con otro nombre")
         return
-
     nueva_password = input("Ingrese una contraseña: ").strip()
-
-    # agregamos el nuevo usuario
     usuarios.append({
         "usuario": nuevo_usuario,
         "password": nueva_password
     })
-
     gestor.guardar_json("usuarios.json", usuarios)
-    print(f"✅ Usuario {nuevo_usuario} registrado con éxito!")
+    print(f" Usuario {nuevo_usuario} registrado con exito!")
 
 def obtener_productos():
     return gestor.cargar_json("productos.json")
