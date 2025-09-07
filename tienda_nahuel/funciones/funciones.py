@@ -21,4 +21,4 @@ def mostrar_clientes():
         for c in clientes:
             print(c)
     else:
-        print("No hay clientes registrados todavia.")
+        print("No hay clientes registrados.")

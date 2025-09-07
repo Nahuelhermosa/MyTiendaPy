@@ -12,7 +12,6 @@ class Cliente:
             return self.email == other.email
         return False
 
-    # Metodos de instancia
     def verificar_contraseña(self, contraseña):
         return self.contraseña == contraseña
 

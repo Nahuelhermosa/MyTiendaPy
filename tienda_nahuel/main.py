@@ -2,13 +2,13 @@ from funciones.funciones import registrar_cliente, iniciar_sesion, mostrar_clien
 
 def menu_principal():
     while True:
-        print("\n=== MENÚ PRINCIPAL ===")
-        print("1. Iniciar sesión")
+        print("\n=== MENU PRINCIPAL ===")
+        print("1. Iniciar sesion")
         print("2. Registrar cliente")
         print("3. Mostrar clientes")
         print("4. Salir")
 
-        opcion = input("Seleccione una opción: ")
+        opcion = input("Seleccione una opcion: ")
 
         if opcion == "1":
             nombre = input("Ingrese su nombre: ")
@@ -29,7 +29,7 @@ def menu_principal():
             break
 
         else:
-            print("Opción inválida, intente nuevamente.")
+            print("Opcion invalida, intente nuevamente.")
 
 if __name__ == "__main__":
     menu_principal()
