@@ -1,42 +1,35 @@
-import cliente
+from funciones.funciones import registrar_cliente, iniciar_sesion, mostrar_clientes
 
 def menu_principal():
     while True:
-        print("\n=== LA TIENDA DE NAHUEL ===")
-        print("1. Iniciar sesion para ver mercaderia")
-        print("2. Registrar nuevo cliente")
-        print("3. Salir")
-        opcion = input("Seleccione una opcion: ")
+        print("\n=== MENÚ PRINCIPAL ===")
+        print("1. Iniciar sesión")
+        print("2. Registrar cliente")
+        print("3. Mostrar clientes")
+        print("4. Salir")
+
+        opcion = input("Seleccione una opción: ")
 
         if opcion == "1":
-            usuario = cliente.login()
-            if usuario:
-                menu_usuario(usuario)
-        elif opcion == "2":
-            cliente.registrar_usuario()
-        elif opcion == "3":
-            print(" Gracias por su visita")
-            break
-        else:
-            print(" Opción invalida")
+            nombre = input("Ingrese su nombre: ")
+            contraseña = input("Ingrese su contraseña: ")
+            iniciar_sesion(nombre, contraseña)
 
-def menu_usuario(cliente_activo):
-    while True:
-        print("\n=== MENU DE USUARIOS ===")
-        print("1. Ver productos")
-        print("2. Comprar producto")
-        print("3. Cerrar sesion")
-        opcion = input("Seleccione una opcion: ")
-
-        if opcion == "1":
-            cliente.mostrar_productos()
         elif opcion == "2":
-            cliente.comprar_producto(cliente_activo) 
+            nombre = input("Ingrese su nombre: ")
+            contraseña = input("Ingrese su contraseña: ")
+            email = input("Ingrese su email: ")
+            registrar_cliente(nombre, contraseña, email)
+
         elif opcion == "3":
-            print(f" Sesion cerrada ({cliente_activo.usuario})")
+            mostrar_clientes()
+
+        elif opcion == "4":
+            print(" Saliendo del sistema...")
             break
+
         else:
-            print(" Opcion invalida")
+            print("Opción inválida, intente nuevamente.")
 
 if __name__ == "__main__":
     menu_principal()
